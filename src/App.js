@@ -1,11 +1,22 @@
-import React from 'react';
-import './style.css';
+import React from "react";
+import Header from "./components/Header";
+import Navigation from "./components/Navigation";
+import Article from "./components/Article";
+import Footer from "./components/Footer";
+import browsersData from "./data/browsers.json";
 
-export default function App() {
+const App = () => {
   return (
     <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
+      <Header title="Popular web browsers" />
+      <Navigation />
+      <main>
+        <Article browsers={browsersData} />
+      </main>
+      <Footer copyright="Copyright by Bogate Interfejsy Webowe" />
     </div>
   );
-}
+};
+
+console.log(browsersData);
+export default App;
